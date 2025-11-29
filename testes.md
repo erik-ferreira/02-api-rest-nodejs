@@ -24,3 +24,7 @@ Requisições HTTP, WebSockets
 
 Fazer primeiro os testes E2E, pois não dependem de nenhuma tecnologia, não dependem de nenhuma arquitetura.
 Não se usa sempre E2E para tudo porque são lentos, geralmente, os outros dois tipos são mais performáticos.
+
+#### Observações
+
+- Todo teste deve se excluir de qualquer contexto, ou seja, não se deve escrever um teste que depende de outro teste

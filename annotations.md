@@ -1,30 +1,40 @@
-# Testes
+# Anotações
 
-## Unitários
+## Testes
+
+### Unitários
 
 Unidade da aplicação
 
-## Integração
+### Integração
 
 Comunicação entre duas ou mais unidades
 
-## e2e
+### e2e
 
 Ponta a ponta: simula um usuário operando na aplicação
 
-### front-end
+#### front-end
 
 Abre a página de login, digite o texto erik.souza@gmail.com no campo com ID email, e clique no botão de salvar
 
-### back-end
+#### back-end
 
 Requisições HTTP, WebSockets
 
-## Pirâmide de testes
+### Pirâmide de testes
 
 Fazer primeiro os testes E2E, pois não dependem de nenhuma tecnologia, não dependem de nenhuma arquitetura.
 Não se usa sempre E2E para tudo porque são lentos, geralmente, os outros dois tipos são mais performáticos.
 
-#### Observações
+##### Observações
 
 - Todo teste deve se excluir de qualquer contexto, ou seja, não se deve escrever um teste que depende de outro teste
+
+## Deploy da aplicação
+
+### Serviço gerenciado
+
+1. TSUP - `npm i tsup -D`
+   Ferramente para fazer o processo de build do projeto
+   Script build no package.json: `tsup src --out-dir build`

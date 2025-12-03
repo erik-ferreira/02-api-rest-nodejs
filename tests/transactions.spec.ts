@@ -98,11 +98,14 @@ describe("Transaction routes", () => {
 
     const cookies = createTransactionResponse.get("Set-Cookie") || []
 
-    await request(app.server).post("/transactions").send({
-      title: "Debit Transaction",
-      amount: 2000,
-      type: "debit",
-    })
+    await request(app.server)
+      .post("/transactions")
+      .set("Cookie", cookies)
+      .send({
+        title: "Debit Transaction",
+        amount: 2000,
+        type: "debit",
+      })
 
     const summaryResponse = await request(app.server)
       .get("/transactions/summary")
